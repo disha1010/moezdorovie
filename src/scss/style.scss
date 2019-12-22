@@ -1,31 +1,16 @@
-@font-face {
-  font-family: "CeraRoundPro";
-  font-weight: normal;
-  src: url("../fonts/CeraRoundPro-Regular.otf") format("opentype"),
-    url("../fonts/CeraRoundPro-Regular.ttf") format("truetype");
-}
+@import "./fonts.scss";
 
-@font-face {
-  font-family: "CeraRoundPro";
-  font-weight: bold;
-  src: url("../fonts/CeraRoundPro-Bold.otf") format("opentype"),
-    url("../fonts/CeraRoundPro-Bold.ttf") format("truetype");
-}
-
-.pixel-perfect {
-  position: absolute;
-  background-position: 50% 0;
-  background-image: url(../images/layer.jpg);
-  width: 100%;
-  height: 100%;
-  opacity: 50%;
-  z-index: -1;
+@mixin flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {
   margin: 0;
   font-family: "CeraRoundPro", sans-serif;
   font-size: 16px;
+  background-color: #fafaff;
 }
 
 h2 {
@@ -65,9 +50,7 @@ ul {
   width: 100%;
 
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-justify-between;
     padding-top: 20px;
 
     .header-logo {
@@ -75,16 +58,12 @@ ul {
     }
 
     .header-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex-justify-between;
       flex-basis: 66%;
     }
 
     .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex-justify-between;
       flex-grow: 1;
       padding-right: 70px;
       li {
@@ -184,6 +163,7 @@ ul {
 }
 
 .about {
+  position: relative;
   .container {
     display: flex;
     justify-content: center;
@@ -199,6 +179,7 @@ ul {
     width: 335px;
     height: 650px;
     padding-right: 60px;
+    z-index: 2;
   }
 
   h2 {
@@ -260,7 +241,7 @@ ul {
     border-radius: 30px;
     color: #fff;
     font-weight: 500;
-    font-family : inherit;
+    font-family: inherit;
     font-size: 1rem;
   }
 
@@ -271,7 +252,7 @@ ul {
     border-radius: 30px;
     margin-right: 40px;
     width: 318px;
-    font-family : inherit;
+    font-family: inherit;
     font-size: 0.875rem;
     color: #60759d;
 
@@ -279,4 +260,86 @@ ul {
       color: #a8b2bf;
     }
   }
+}
+
+.lines-img {
+  position: absolute;
+  left: -50px;
+  top: -35px;
+  background-image: url(../images/lines.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 170%;
+  width: 950px;
+  height: 930px;
+}
+
+.diagram-img {
+  position: absolute;
+  right: 95px;
+  bottom: -170px;
+  background-image: url(../images/diagram.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 483px;
+  height: 483px;
+  z-index: -1;
+}
+
+.footer {
+  background-color: #39649d;
+  .footer-logo {
+    width: 160px;
+    height: 17px;
+    background-size: cover;
+    margin-right: 240px;
+  }
+  .footer-top {
+    @include flex-justify-between;
+    padding-top: 65px;
+    padding-bottom: 50px;
+
+    .footer-nav {
+      @include flex-justify-between;
+      width: calc(100% - 160px - 240px);
+      ul {
+        @include flex-justify-between;
+        flex-grow: 1;
+        padding-right: 70px;
+      }
+      a {
+        font-weight: normal;
+        color: #fff;
+      }
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin: 0;
+    background-color: #335b91;
+    border: none;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: #fff;
+    p {
+      margin: 0;
+      padding-bottom: 30px;
+      padding-top: 35px;
+      a {
+        color: #e70067;
+      }
+    }
+  }
+}
+.отбивка {
+  background-color: #335b91;
+  position: absolute;
+  left: 380px;
+  top: 4876px;
+  width: 1160px;
+  height: 1px;
+  z-index: 13;
 }
