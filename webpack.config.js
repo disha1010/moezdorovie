@@ -18,19 +18,35 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader
           },
-          'css-loader',
-          'sass-loader',
+          "css-loader",
+          "sass-loader"
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif|otf|ttf)$/,
+        test: /\.(png|svg|jpg|gif)$/,
         use: [
-          'file-loader',
-        ],
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "images/"
+            }
+          }
+        ]
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/"
+            }
+          }
+        ]
+      }
     ]
   },
-  plugins: [
-    new MiniCssExtractPlugin('style.css')
-  ]
+  plugins: [new MiniCssExtractPlugin("style.css")]
 };
