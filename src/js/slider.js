@@ -61,7 +61,7 @@ const zdorovijeSlider = new Flickity( '.slider', {
     // watches the content of :after of the element
     // activates if #element:after { content: 'flickity' }
   
-    wrapAround: false
+    wrapAround: true
     // at end of cells, wraps-around to first for infinite scrolling
   
   });

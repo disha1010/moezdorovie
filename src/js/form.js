@@ -23,7 +23,7 @@ function submitEmail() {
       if (this.status >= 200 && this.status < 300) {
         showMessage("Ссылка на предоставление доступа отправлена на ваш Email", true);
       } else {
-        showMessage("Введите корректый Email", false);
+        showMessage("Ошибка при отправке запроса", false);
       }
     }
   };
@@ -43,4 +43,5 @@ function showMessage(text, success) {
 
 function hideMessage() {
   emailMessage.innerHTML = " ";
+  emailMessage.className = "form-input-msg"
 }
