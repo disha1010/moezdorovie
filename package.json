@@ -24,8 +24,8 @@
     "webpack-dev-server": "^3.10.0"
   },
   "dependencies": {
-    "css-loader": "^3.4.0",
-    "lodash": "^4.17.15",
-    "style-loader": "^1.0.2"
+    "css-loader": "3.4.0",
+    "flickity": "2.2.1",
+    "style-loader": "1.0.2"
   }
 }

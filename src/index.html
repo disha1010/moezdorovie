@@ -8,51 +8,57 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header-logo logo"></div>
+      <div class="header-container">
+        <a class="header-logo" href="#"></a>
         <nav class="header-nav">
-          <ul class="nav">
-            <li class="header-link"><a href="">О сервисе</a></li>
-            <li class="header-link"><a href="">Функции</a></li>
-            <li class="header-link"><a href="">Возможности</a></li>
-            <li class="header-link"><a href="">Партнеры</a></li>
+          <ul class="header-menu">
+            <li class="header-link"><a href="#about">О сервисе</a></li>
+            <li class="header-link"><a href="#">Функции</a></li>
+            <li class="header-link"><a href="#">Возможности</a></li>
+            <li class="header-link"><a href="#">Партнеры</a></li>
           </ul>
-          <a class="btn">Оставить заявку</a>
+          <a class="btn btn--transparent" href="#">Оставить заявку</a>
         </nav>
       </div>
     </header>
 
-    <main class="content">
+    <main>
       <div class="slider">
-        <div class="container">
-          <section class="slider-description">
-            <h2>
-              Расширяем возможности предоставления качественных медицинских
-              услуг
-            </h2>
-            <p>
-              «Дневник здоровья» – новый сервис для самоконтроля показателей
-              состояния здоровья, разработанный для участников программы «Мое
-              здоровье».
-            </p>
-            <a href="">Узнать больше</a>
-          </section>
+        <div class="carousel-cell carousel-cell-1">
+          <div class="slider-container">
+            <section class="slider-desc">
+              <h2 class="title">
+                Расширяем возможности предоставления качественных медицинских услуг
+              </h2>
+              <p class="slider-desc-subtitle">
+                «Дневник здоровья» – новый сервис для самоконтроля показателей состояния здоровья, разработанный для участников программы «Мое здоровье».
+              </p>
+              <a class="btn btn--pink" href="#">Узнать больше</a>
+            </section>
+          </div>
         </div>
-        <nav class="slider-nav">
-          <ul>
-            <li class="slider-nav-item active"></li>
-            <li class="slider-nav-item"></li>
-          </ul>
-        </nav>
+        <div class="carousel-cell carousel-cell-2">
+          <div class="slider-container">
+            <section class="slider-desc">
+              <h2 class="title">
+                Следить за здоровьем станет проще
+              </h2>
+              <p class="slider-desc-subtitle">
+                Скоро вы сможете находиться на связи со своим лечащим врачом независимо от своего местоположения, вести дневник мониторинга самочувствия, получать рекомендации по плану лечения и многое другое.
+              </p>
+              <a class="btn btn--pink" href="#">Узнать больше</a>
+            </section>
+          </div>
+        </div>
       </div>
 
-      <div class="about">
+      <div class="about" id="about">
         <div class="lines-img"></div>
         <div class="diagram-img"></div>
-        <div class="container">
+        <div class="about-container">
           <section class="adout-img"></section>
           <section class="about-desc">
-            <h2>Что такое «Дневник здоровья»?</h2>
+            <h2 class="title">Что такое «Дневник здоровья»?</h2>
             <p>Дневник пациента — это удобный онлайн-сервис:</p>
             <ul class="about-desc-list">
               <li>
@@ -68,30 +74,31 @@
               </li>
               <li>Получайте рекомендации, созданные специально для вас</li>
             </ul>
-            <a href="">Оставить заявку</a>
+            <a class="btn btn--pink" href="#">Оставить заявку</a>
           </section>
         </div>
       </div>
 
       <div class="form">
-        <h2>Получите бесплатный доступ к «Дневнику здоровья»</h2>
-        <p>
+        <h2 class="title">Получите бесплатный доступ к «Дневнику здоровья»</h2>
+        <p class="form-subtitle">
           Оставьте свою электронную почту <br />и вы узнаете о запуске данного
           сервиса первым!
         </p>
-        <form action="">
-          <input type="email" class="form-input" placeholder="Ваш E-mail" />
-          <button type="submit" class="form-btn btn">Отправить</button>
+        <form id="emailForm" novalidate>
+          <input type="email" class="form-input" placeholder="Ваш E-mail" id="email" required />
+          <input type="submit" class="btn btn--pink" value="Отправить" />
+          <div id="emailMessage" class="form-input-msg"></div>
         </form>
       </div>
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <section class="footer-top">
-          <div class="footer-logo logo"></div>
+      <div class="footer-container">
+        <section class="footer--top">
+          <a class="footer-logo" href="#"></a>
           <nav class="footer-nav">
-            <ul class="nav">
+            <ul class="footer-menu">
               <li><a href="">О сервисе</a></li>
               <li><a href="">Функции</a></li>
               <li><a href="">Возможности</a></li>
@@ -101,9 +108,9 @@
           </nav>
         </section>
         <hr />
-        <section class="footer-bottom">
-          <p class="copyright">
-            Разработка сайта <a href="http://">Redsoft</a>
+        <section class="footer--bottom">
+          <p class="footer-copyright">
+            Разработка сайта <a href="https://redsoft.ru/">Redsoft</a>
           </p>
         </section>
       </div>

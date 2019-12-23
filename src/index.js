@@ -1,10 +1,5 @@
-import _ from 'lodash';
+import '../node_modules/flickity/dist/flickity.css';
 import './scss/style.scss';
 
-function component() {
-  const element = document.createElement("div");
-
-  return element;
-}
-
-document.body.appendChild(component());
+import './js/form';
+import './js/slider';

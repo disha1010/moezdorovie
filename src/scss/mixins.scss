@@ -1,0 +1,21 @@
+@mixin flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+@mixin logo-img {
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+}
